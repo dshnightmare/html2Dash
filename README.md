@@ -64,4 +64,16 @@ Generate the Docset for requests: `requests.docset`. Command：
     Create the Icon for the Docset!  
     Generate Docset Successfully!  
 
+# Docset Feed
 
+To archive your docset, use the following command:
+
+    $ tar --exclude='.DS_Store' -cvzf <docset name>.tgz <docset name>.docset
+
+Ceate a XML file that contains the following:
+
+- A root `<entry>` element
+- A `<version>` element. You can use any versioning system you want. Dash will use string comparison to determine whether or not to download an update.
+- One or several `<url>` elements. These point to the URL of the archived docset
+
+Example: [NodeJS_Sample.xml](https://kapeli.com/resources/NodeJS_Sample.xml)
